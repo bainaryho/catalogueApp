@@ -1,4 +1,4 @@
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.shortcuts import render
@@ -29,3 +29,7 @@ def user_login(request):
 @login_required
 def dashboard(request):
     return render(request, 'account/dashboard.html', {'section': 'dashboard'})
+
+def user_logout(request):#함수로 로그아웃 해결
+    logout(request)
+    return render(request, 'account/logged_out.html')
