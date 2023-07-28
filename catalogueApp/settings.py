@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.sitemaps',
     'django.contrib.postgres',
+    'account.apps.AccountConfig',
 ]
 
 # 실행할 미들웨어를 포함하는 목록
@@ -160,3 +161,7 @@ EMAIL_HOST_USER = os.getenv('email')
 EMAIL_HOST_PASSWORD = os.getenv('password')
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+LOGIN_URL = 'account:login'
+LOGOUT_URL = 'account:logout'
+LOGIN_REDIRECT_URL = 'account:dashboard'
