@@ -164,6 +164,6 @@ EMAIL_HOST_PASSWORD = os.getenv('password')
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
-LOGIN_URL = 'account:login'
-LOGOUT_URL = 'account:logout'
-LOGIN_REDIRECT_URL = 'account:dashboard'
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
+LOGIN_REDIRECT_URL = 'dashboard'
