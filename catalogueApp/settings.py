@@ -41,6 +41,8 @@ ALLOWED_HOSTS = [
 # 모든 프로젝트에 대해 편집해야하는 설정입니다.
 # 이 설정은 사이트에서 활성화된 어플리케이션을 장고에 알려줍니다. 장고에서 중요한 설정
 INSTALLED_APPS = [
+    'account.apps.AccountConfig',#account앱을 제일 먼저 부르기위해 해당위치.
+
     'django.contrib.admin',  # 관리사이트
     'django.contrib.auth',  # 인증프레임워크
     'django.contrib.contenttypes',  # 콘텐츠 유형처리를 위한 프레임워크
@@ -53,7 +55,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.sitemaps',
     'django.contrib.postgres',
-    'account.apps.AccountConfig',
+
 ]
 
 # 실행할 미들웨어를 포함하는 목록
